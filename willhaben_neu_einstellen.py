@@ -1,4 +1,3 @@
-from multiprocessing import Value
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.firefox.service import Service
@@ -47,4 +46,4 @@ while driver.find_element(By.NAME, value="republish") != []:
             time.sleep(10)
             driver.get("https://www.willhaben.at/iad/myprofile/myadverts?page=" + max_pages)
 
-time.sleep(10), driver.close()
+time.sleep(10), driver.quit()
